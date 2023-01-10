@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import "./style.css";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 
 // Scene
 const scene = new THREE.Scene();
@@ -13,6 +14,12 @@ const material = new THREE.MeshStandardMaterial({
 const mesh = new THREE.Mesh(geometry, material);
 
 scene.add(mesh);
+
+// Create cars
+// const loader = new OBJLoader();
+// loader.load("./assets/tesla.obj", function (object) {
+//   scene.add(object);
+// });
 
 // Sizes
 const sizes = {
